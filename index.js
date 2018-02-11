@@ -19,7 +19,20 @@ client.on('ready', () => {
 prefix = config.prefix;
 
 client.on('message', message => {
+	/*
+	*LOG
+	*I'm the NSA of my own server xd
+	*/
 	
+			var logAuthor = message.member;
+			var logMessage = message.content;
+			var logger = fs.createWriteStream('log.txt', {
+				flags: "a"
+			});
+			logger.write(logAuthor + " wrote on " + Date().toLocaleString() + ": " + logMessage + "\n");
+	
+	
+
 	var queue = {};
 	
 	const commands = {
@@ -325,13 +338,30 @@ client.on('message', message => {
 			} else {
 				message.reply("invalid argument.");
 			}
+		},
+		'log':(message) =>{
+			var args = message.content.split(" ");
+			var status = args[1];
+			if(status == "delete" && message.member.id == adminID ){
+				message.reply("idk");
+			
+			
+
 		}
+		
+
+	}
 
 
 	}
 
 
 
+	
+	
+	
+	
+	
 	if (message.content.startsWith("https://discord.gg")) {
 		message.member.kick(); //kicking would be more appropriate wouldn't it xd
 		message.reply(`Don't post invite links. ${message.member} was kicked.`).then(msg => msg.delete(5000));
