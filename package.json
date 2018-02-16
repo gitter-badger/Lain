@@ -1,25 +1,14 @@
 {
-  "name": "shinobu",
+  "name": "lain",
   "version": "1.0.0",
-  "description": "A discord bot",
+  "description": "a bot for discord",
   "main": "index.js",
-  "engines": {
-    "node": "6.12.3"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "discord.js": "^11.3.0",
-    "forever-win": "^0.10.11",
-    "node-opus": "^0.2.1",
-    "portscanner": "^2.1.1",
-    "ytdl-core": "github:fent/node-ytdl-core#master"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "herherher",
   "license": "MIT",
-  "devDependencies": {
-    "electron": "1.7.6"
+  "dependencies": {
+    "discord.js": "^11.3.0"
   }
 }
